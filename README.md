@@ -16,15 +16,122 @@
 
 1. Buat script untuk melakukan validasi pada isian form.
 
+  Program ini dibuat untuk mensimulasikan form pendaftaran workshop papercraft dengan validasi input menggunakan JavaScript.
+
+    <!DOCTYPE html>
+    <html lang="id">
+    
+    <head>
+      <meta charset="UTF-8">
+      <title>Form Pendaftaran Papercraft</title>
+      <style>
+        body { font-family: sans-serif; padding: 20px; }
+        label { display: block; margin-top: 10px; }
+      </style>
+    </head>
+    
+    <body>
+      <h2>Form Pendaftaran Workshop Papercraft</h2>
+    
+      <form onsubmit="return daftarPapercraft()">
+        <label>Nama:
+          <input type="text" id="nama">
+        </label>
+    
+        <label>Umur:
+          <input type="number" id="umur">
+        </label>
+    
+        <label>Pilih jenis papercraft favorit:</label>
+        <input type="checkbox" id="karakter" value="5000"> Karakter (Rp5000)<br>
+        <input type="checkbox" id="hewan" value="7000"> Hewan (Rp7000)<br>
+        <input type="checkbox" id="bangunan" value="10000"> Bangunan (Rp10000)<br>
+    
+        <label>Metode Pendaftaran:
+          <select id="metode">
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+            <option value="cod">Bayar di tempat</option>
+          </select>
+        </label>
+    
+        <button type="submit">Daftar Sekarang</button>
+      </form>
+    
+      <script>
+        function daftarPapercraft() {
+          let nama = document.getElementById("nama").value.trim();
+          let umur = parseInt(document.getElementById("umur").value);
+          let metode = document.getElementById("metode").value;
+    
+          // 1. Alert
+          alert("Halo " + nama + "! Siap daftar papercraft?");
+    
+          // 2. Prompt
+          let motivasi = prompt("Kenapa kamu suka papercraft?");
+          if (motivasi) {
+            alert("Motivasi kamu: " + motivasi);
+          }
+    
+          // 3. Operasi Aritmatika
+          let total = 0;
+          if (document.getElementById("karakter").checked) total += 5000;
+          if (document.getElementById("hewan").checked) total += 7000;
+          if (document.getElementById("bangunan").checked) total += 10000;
+    
+          // 4. Seleksi if..else
+          if (umur < 10) {
+            alert("Kamu terlalu muda, tapi semangat kamu luar biasa!");
+          } else if (umur > 60) {
+            alert("Kamu legend! Papercraft cocok buat nostalgia.");
+          } else {
+            alert("Umur kamu pas banget buat jadi kreator papercraft.");
+          }
+    
+          // 5. Switch
+          switch (metode) {
+            case "online":
+              alert("Kamu memilih pendaftaran online. Praktis!");
+              break;
+            case "offline":
+              alert("Kamu memilih datang langsung. Siap-siap bawa lem!");
+              break;
+            case "cod":
+              alert("Bayar di tempat? Jangan lupa bawa uang pas.");
+              break;
+            default:
+              alert("Metode tidak dikenali.");
+          }
+    
+          // 7. Total harga otomatis
+          alert("Total biaya papercraft kamu: Rp" + total);
+    
+          // 8. Keep it simple
+          return false; // biar nggak reload halaman
+        }
+      </script>
+    </body>
+    </html>
+
 ## Hasil Web
 
+  <img width="756" height="321" alt="image" src="https://github.com/user-attachments/assets/f364e446-d51a-46fc-b48c-ccc022267002" />
 
+  <img width="755" height="306" alt="image" src="https://github.com/user-attachments/assets/d3996aea-e8f9-4645-9c22-e152c49568a7" />
+
+  <img width="756" height="299" alt="image" src="https://github.com/user-attachments/assets/0176bba2-a399-486c-bcdd-f7a46e8ef28d" />
+
+  <img width="758" height="318" alt="image" src="https://github.com/user-attachments/assets/6fad783a-a3ee-464f-998b-dc5309ca29ef" />
+
+  <img width="757" height="304" alt="image" src="https://github.com/user-attachments/assets/c52b0578-9f29-4d6c-8483-6e79a00dc77a" />
 
 ## Langkah-Langkah Praktikum
 
 ### Javascrip Dasar
 
 1. Pemakaian Alert sebagai property window.
+
+  **alert** digunakan untuk memberikan notifikasi langsung kepada pengguna, misalnya saat nama kosong atau umur tidak sesuai.
 
   <img width="959" height="264" alt="image" src="https://github.com/user-attachments/assets/f0cacb21-aa2b-4f3a-8313-9e8835763887" />
 
@@ -33,6 +140,8 @@
   <img width="959" height="290" alt="image" src="https://github.com/user-attachments/assets/7e9ec388-a754-44b1-af7d-7bb657cfbce6" />
 
 3. Pemakaian Prompt
+
+  **prompt** digunakan untuk meminta input peserta secara interaktif.
 
   <img width="958" height="326" alt="image" src="https://github.com/user-attachments/assets/f76422b6-4b7d-4ebc-98b6-d89673dc7d9a" />
 
@@ -45,6 +154,8 @@
 ### Dasar Pemrograman Di Javascript
 
 1. Operasi dasar aritmatika
+
+   Operasi aritmatika digunakan untuk menghitung total bilangan berdasarkan pilihan button.
 
               function test (val1,val2)
         {
@@ -70,6 +181,8 @@
 
 2. Seleksi kondisi (if..else)
 
+   Struktur **if..else** digunakan untuk memberikan respon berdasarkan nilai Mahasiswa.
+
         <script languange="javascript">
             var nilai = prompt("Nilai (0-100): ", 0);
             var hasil = "";
@@ -85,6 +198,8 @@
   <img width="391" height="221" alt="image" src="https://github.com/user-attachments/assets/8518d9d3-dcae-4340-bc9c-247ee469b900" />
 
 3. Penggunaan operator switch untuk seleksi kondisi
+
+   Struktur **switch** digunakan untuk menampilkan pesan sesuai bilangan yang dipilih.
 
         <script languange="javascript">
                 function test (){
