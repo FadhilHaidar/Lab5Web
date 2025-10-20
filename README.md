@@ -160,5 +160,33 @@
 
   <img width="562" height="213" alt="image" src="https://github.com/user-attachments/assets/5317be43-6953-4e96-bd47-452945e2cdd6" />
 
+### HTML DOM
 
-6. HTML DOM
+1. Pilihan menggunakan checkBox dengan perhitungan otomatis
+
+        <script>
+            function hitung(ele) {
+                var total = document.getElementById('total').value;
+                    total = (total ? parseInt(total) : 0);
+                var harga = 0;
+    
+                if (ele.checked) {
+                    harga = ele.value;
+                    total += parseInt(harga);
+                } else {
+                    harga = ele.value;
+                    if (total > 0)
+                        total -= parseInt(harga);
+                }
+                document.getElementById('total').value = total;
+            }
+        </script>
+
+        <h1>Daftar Menu Makanan</h1>
+        <label><input type="checkbox" value="5000" id="menu1" onclick="hitung(this);" /> Ayam Goreng Rp. 5.000 </label><br/>
+        <label><input type="checkbox" value="500" id="menu2" onclick="hitung(this);" /> Tempe Goreng Rp. 500 </label><br/>
+        <label><input type="checkbox" value="2500" id="menu3" onclick="hitung(this);" /> Telur Dadar Rp. 2.500 </label><hr/>
+        <strong>Total Bayar: Rp. <input id="total" type="text" /></strong>
+
+  <img width="565" height="228" alt="image" src="https://github.com/user-attachments/assets/bfc2085f-a0d5-422a-b9e7-dae442f65f75" />
+
