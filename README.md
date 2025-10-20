@@ -123,6 +123,8 @@
 
   <img width="758" height="318" alt="image" src="https://github.com/user-attachments/assets/6fad783a-a3ee-464f-998b-dc5309ca29ef" />
 
+  <img width="760" height="319" alt="image" src="https://github.com/user-attachments/assets/fec8220f-46fb-4af1-957c-a53f0a15a954" />
+
   <img width="757" height="304" alt="image" src="https://github.com/user-attachments/assets/c52b0578-9f29-4d6c-8483-6e79a00dc77a" />
 
 ## Langkah-Langkah Praktikum
