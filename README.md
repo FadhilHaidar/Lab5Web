@@ -114,4 +114,51 @@
 
 ### Pembuatan Form
 
+1. Form Input
+
+        <script languange="javascript">
+            function test () {
+                var val1=document.kirim.T1.value
+                if (val1%2==0)
+                    document.kirim.T2.value="Bilangan genap"
+                else
+                    document.kirim.T2.value="Bilangan ganjil"
+            }
+        </script>
+
+           <form method="POST" name="kirim">
+            <p>BIL <input type="text" name="T1" size="20">
+            MERUPAKAN BIL <input type="text" name="T2" size="20"></p>
+            <p><input type="button" value="TEBAK" name="B1" onclick=test()></p>
+        </form>
+
+  <img width="565" height="233" alt="image" src="https://github.com/user-attachments/assets/9b68fb26-b374-4da9-9d5d-bb4b27797382" />
+
+2. Form Button
+
+        <script languange="javascript">
+            function ubahWarnaLB(warna) {
+                document.bgColor = warna;
+            }
+            function ubahWarnaLD(warna) {
+                document.fgColor = warna;
+            }
+        </script>
+
+        <h1>Tes</h1>
+        <form>
+            <input type="button" value="Latar Belakang Hijau" onclick="ubahWarnaLB('GREEN')">
+            <input type="button" value="Latar Belakang Putih" onclick="ubahWarnaLB('WHITE')">
+            <input type="button" value="Teks Kuning" onclick="ubahWarnaLD('YELLOW')">
+            <input type="button" value="Teks Biru" onclick="ubahWarnaLD('BLUE')">
+        </form>
+        <script languange="javascript">
+            document.write("Dimodifikasi terakhir pada " + document.lastModified);
+        </script>
+
+  <img width="574" height="186" alt="image" src="https://github.com/user-attachments/assets/9a9f0fe2-e175-4272-a692-6386b04f3bfa" />
+
+  <img width="562" height="213" alt="image" src="https://github.com/user-attachments/assets/5317be43-6953-4e96-bd47-452945e2cdd6" />
+
+
 6. HTML DOM
